@@ -1,0 +1,83 @@
+[[package]]
+category = "main"
+description = "Generate and work with holidays in Python"
+name = "holidays"
+optional = false
+python-versions = "*"
+version = "0.9.11"
+
+[package.dependencies]
+python-dateutil = "*"
+six = "*"
+
+[[package]]
+category = "main"
+description = "Python datetimes made easy."
+name = "pendulum"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "1.5.1"
+
+[package.dependencies]
+python-dateutil = ">=2.6.0.0,<3.0.0.0"
+pytzdata = ">=2018.3.0.0"
+tzlocal = ">=1.5.0.0,<2.0.0.0"
+
+[[package]]
+category = "main"
+description = "Extensions to the standard Python datetime module"
+name = "python-dateutil"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
+version = "2.8.1"
+
+[package.dependencies]
+six = ">=1.5"
+
+[[package]]
+category = "main"
+description = "World timezone definitions, modern and historical"
+name = "pytz"
+optional = false
+python-versions = "*"
+version = "2019.3"
+
+[[package]]
+category = "main"
+description = "The Olson timezone database for Python."
+name = "pytzdata"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "2019.3"
+
+[[package]]
+category = "main"
+description = "Python 2 and 3 compatibility utilities"
+name = "six"
+optional = false
+python-versions = ">=2.6, !=3.0.*, !=3.1.*"
+version = "1.13.0"
+
+[[package]]
+category = "main"
+description = "tzinfo object for the local timezone"
+name = "tzlocal"
+optional = false
+python-versions = "*"
+version = "1.5.1"
+
+[package.dependencies]
+pytz = "*"
+
+[metadata]
+content-hash = "312e4fb3d85f9cafdee8a232919a8c43bad947927ad9525fe01087f527cd8077"
+python-versions = "^2.7 || ^3.6"
+
+[metadata.hashes]
+holidays = ["4b1b6b5afaf5af8adef0d5a7e37d5085c5fcf70c203f641c1f01e205cbf94516", "915fdb92b596cfb66067010759b4384a9c6bc82931311d5bf07fe04920cc11bc", "b8e3914abe7460e866732c1424b6ab4586f3fa01e3149aec3785d012a0d943a4"]
+pendulum = ["4173ce3e81ad0d9d61dbce86f4286c43a26a398270df6a0a89f501f0c28ad27d", "56a347d0457859c84b8cdba161fc37c7df5db9b3becec7881cd770e9d2058b3c", "738878168eb26e5446da5d1f7b3312ae993a542061be8882099c00ef4866b1a2", "95536b33ae152e3c831eb236c1bf9ac9dcfb3b5b98fdbe8e9e601eab6c373897", "c04fcf955e622e97e405e5f6d1b1f4a7adc69d79d82f3609643de69283170d6d", "dd6500d27bb7ccc029d497da4f9bd09549bd3c0ea276dad894ea2fdf309e83f3", "ddaf97a061eb5e2ae37857a8cb548e074125017855690d20e443ad8d9f31e164", "e7df37447824f9af0b58c7915a4caf349926036afd86ad38e7529a6b2f8fc34b", "e9732b8bb214fad2c72ddcbfec07542effa8a8b704e174347ede1ff8dc679cce", "f4eee1e1735487d9d25cc435c519fd4380cb1f82cde3ebad1efbc2fc30deca5b"]
+python-dateutil = ["73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c", "75bb3f31ea686f1197762692a9ee6a7550b59fc6ca3a1f4b5d7e32fb98e2da2a"]
+pytz = ["1c557d7d0e871de1f5ccd5833f60fb2550652da6be2693c1e02300743d21500d", "b02c06db6cf09c12dd25137e563b31700d3b80fcc4ad23abb7a315f2789819be"]
+pytzdata = ["84c52b9a47d097fcd483f047a544979de6c3a86e94c845e3569e9f8acd0fa071", "fac06f7cdfa903188dc4848c655e4adaee67ee0f2fe08e7daf815cf2a761ee5e"]
+six = ["1f1b7d42e254082a9db6279deae68afb421ceba6158efa6131de7b3003ee93fd", "30f610279e8b2578cab6db20741130331735c781b56053c59c4076da27f06b66"]
+tzlocal = ["4ebeb848845ac898da6519b9b31879cf13b6626f7184c496037b818e238f2c4e"]
