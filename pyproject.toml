@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sla-calculator"
-version = "0.1.1"
+version = "0.1.2"
 description = "A python module that will calculate the sla time based on working hours and holidays."
 authors = ["Michael Butler <michael.butler@swimlane.com>"]
 readme = "README.md"
