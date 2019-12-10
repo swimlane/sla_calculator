@@ -2,7 +2,7 @@
 
 ## Installation
 ```
-pip install sla_calculator
+pip install sla-calculator
 ```
 ## Usage
 To use this calculator, you must provide a starting time, the open time 
