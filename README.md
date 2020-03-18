@@ -22,7 +22,7 @@ sla_time = sla_calc.calculate(start_time="2019-12-10T01:02:03Z",
                               close_hour=17,
                               country_name="US",
                               sla_in_hours=4)
-print(sla_time.to_iso8601_format())
+print(sla_time.to_iso8601_string())
 ```
 
 ## Locale Specification
