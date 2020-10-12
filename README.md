@@ -45,3 +45,12 @@ sla_time = sla_calc.calculate(start_time="2019-12-10T01:02:03Z",
                               sla_in_hours=4,
                               province="Zurich")
 ```
+
+## Run tests
+Test are written for the pytest framework. Install it with:
+
+    $ poetry install pytest
+    
+Run the tests with:
+
+    $ poetry run pytest
