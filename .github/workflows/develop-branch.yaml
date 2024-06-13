@@ -1,0 +1,23 @@
+name: Develop Branch Workflow
+
+on:
+  push:
+    branches:
+      - develop
+
+permissions:
+  id-token: write # This is required for requesting the JWT enabling AWS authentication
+  contents: write  # This is required for actions/checkout
+
+jobs:
+  tox-build-codesmith-push:
+    name: Build package with tox and push to CloudSmith
+    uses: 1898andCo/github-actions/.github/workflows/branch.yml@main
+    with:
+      perform-tox-build-codesmith-push: true
+      perform-docker-build-argo-deploy: false
+      # `tox` config in `tox.ini`
+      tox-environment: package
+      cloudsmith-repo: data-models
+    secrets:
+      cloudsmith-api-key: "${{ secrets.CLOUDSMITH_API_KEY }}"
