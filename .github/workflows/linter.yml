@@ -1,0 +1,44 @@
+---
+name: Linters
+
+on: # yamllint disable-line rule:truthy
+  push:
+
+permissions: read-all
+
+concurrency:
+  group: ${{github.ref}}-${{github.workflow}}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      repository-projects: read
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          token: ${{secrets.PAT || secrets.GITHUB_TOKEN}}
+          fetch-depth: 2 # If you use VALIDATE_ALL_CODEBASE = true, you can remove this line to improve performances
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Module
+        run: pip install .[dev]
+
+      - name: Run Ruff Linter
+        run: pip install ruff && ruff check --config line-length=120 sla_calculator > ruff-report.txt
+
+      - name: Upload Ruff Artifact
+        if: ${{success() }} || ${{ failure()}}
+        uses: actions/upload-artifact@v4
+        with:
+          name: ruff-report
+          path: ruff-report.txt

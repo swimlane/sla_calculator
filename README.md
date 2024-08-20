@@ -21,9 +21,20 @@ sla_time = sla_calc.calculate(start_time="2019-12-10T01:02:03Z",
                               open_hour=9,
                               close_hour=17,
                               country_name="US",
-                              sla_in_hours=4)
+                              hours=4)
 print(sla_time.to_iso8601_string())
 ```
+## Timezone Specification
+You can also specify the timezone that you are in to calculate the SLA time
+in your local time:
+```python
+sla_time = sla_calc.calculate(start_time="2019-12-10T01:02:03Z",
+                              open_hour=9,
+                              close_hour=17,
+                              country_name="US",
+                              hours=4,
+                              timezone="America/Denver")
+``` 
 
 ## Locale Specification
 You can also specify the province or state that you are in to get a more
@@ -33,7 +44,7 @@ sla_time = sla_calc.calculate(start_time="2019-12-10T01:02:03Z",
                               open_hour=9,
                               close_hour=17,
                               country_name="US",
-                              sla_in_hours=4,
+                              hours=4,
                               state="CO")
 ```
 Or:
@@ -42,7 +53,7 @@ sla_time = sla_calc.calculate(start_time="2019-12-10T01:02:03Z",
                               open_hour=9,
                               close_hour=17,
                               country_name="Switzerland",
-                              sla_in_hours=4,
+                              hours=4,
                               province="Zurich")
 ```
 

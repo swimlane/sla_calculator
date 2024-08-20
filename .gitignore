@@ -68,3 +68,4 @@ Session.vim
 /.idea/
 venv/
 .vscode/
+.venv
